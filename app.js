@@ -3,13 +3,10 @@ const express = require('express');
 
 // execute the package
 const app = express ();
+
 const mongoose = require ('mongoose');
 
-// middleware - a function that executes when a route is hit
-// app.use ('/posts', () => {
-//     console.log('This is a middleware running');
-//  });
-
+require('dotenv/config');
 
 
 // route to home
@@ -22,8 +19,10 @@ app.get ('/posts', (req, res) => {
  });
 
  // connect to db using mongo db atlas 
- mongoose.connect("mongodb+srv://Mac:Harlan1370@restful.0us68.mongodb.net/restful?retryWrites=true&w=majority" , () =>
-  console.log ('Connected to DB!')
+ // mongodb+srv://Mac:<password>@restful.0us68.mongodb.net/restful?retryWrites=true&w=majority
+ mongoose.connect(process.env.DB_CONNECTION,
+    { useNewUrlParser: true},
+    () => console.log ('Connected to DB!')
  );
 
 
