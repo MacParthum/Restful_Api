@@ -1,0 +1,23 @@
+{
+  "name": "restful_api",
+  "version": "1.0.0",
+  "description": "A restful Api with Node.js Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacParthum/Restful_Api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MacParthum/Restful_Api/issues"
+  },
+  "homepage": "https://github.com/MacParthum/Restful_Api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
